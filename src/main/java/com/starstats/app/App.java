@@ -1,5 +1,6 @@
 package com.starstats.app;
 
+import com.StarData.StarDataTools;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.StarData.StarData;
 
@@ -21,5 +22,7 @@ public class App {
         StringWriter writer = new StringWriter();
         mapper.writeValue(writer, data);
         System.out.println(writer);
+
+        System.out.println(StarDataTools.goldPerDay(data[2]));
     }
 }
